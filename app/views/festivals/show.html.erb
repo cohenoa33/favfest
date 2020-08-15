@@ -6,7 +6,16 @@
 <b> Starts at:</b> <%=@festival.start_date.strftime("%m/%d/%Y")%> <br>
 <b> Ends at:</b> <%= @festival.end_date.strftime("%m/%d/%Y")%></b>
 <br>
+
+<% @festival.artists.each do |artist|%>
+
+    <%= link_to artist.name, artist%>
+<% end%>
+
+
 <p><%= @festival.description%></p>
+
+
 
 <img src="<%=@festival.image_url%>" alt= "" width=75% >
 

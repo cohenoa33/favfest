@@ -1,0 +1,15 @@
+<h1><%= @artist.name%></h1>
+<b>Genre:</b> <%= @artist.genre %>
+<br>
+Festivals:
+<br>
+ <ul> <% @artist.festivals.each do |festival|%>
+<li> <%= link_to festival.name, festival %> </li>
+<%end%>
+</ul>
+<br>
+<p><%= @artist.bio%></p>
+<p><%= link_to "Video", @artist.video, :target => "_blank" %></p>
+<br>
+
+<img src="<%=@artist.artist_image%>" alt= "" width=35% >
