@@ -4,13 +4,23 @@
     <title>Favfest</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
-  <body>
+  <nav>
+  <a href="/festivals">Home</a>
+  <a href="/artists"> Artists</a>
+  <%= form_tag(search_page_path, :method => "get", class: 'navbar-form navbar-left') do %>  
+    <%= search_field_tag :search, params[:search], placeholder: "Search by state", class: "form-control" %>   
+    <%= button_tag "Search", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%> 
+    <% end %>
+    </nav>
   
-    <%= yield %>
+      <%= yield %>
+  <body>
+
+
   </body>
 </html>

@@ -3,7 +3,7 @@
 <br>
 Festivals:
 <br>
- <ul> <% @artist.festivals.each do |festival|%>
+ <ul> <% @artist.festivals.uniq.each do |festival|%>
 <li> <%= link_to festival.name, festival %> </li>
 <%end%>
 </ul>

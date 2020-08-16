@@ -1,0 +1,17 @@
+  <% if @results == nil  %>
+  
+  <% elsif @results.location.downcase == @parameter %>
+  <ul>
+      <li><%= link_to @results.name, @results  %><br></li>  
+    </ul>    
+  <% end %>
+
+
+  <% if !!flash[:errors] %>
+  <ul>
+  <% flash[:errors].each do |error|%>
+  <li> <%= error %> </li>
+  <% end %>
+  <% end %>
+  <br>
+        

@@ -7,7 +7,7 @@
 <b> Ends at:</b> <%= @festival.end_date.strftime("%m/%d/%Y")%></b>
 <br>
 
-<% @festival.artists.each do |artist|%>
+<% @festival.artists.uniq.each do |artist|%>
 
     <%= link_to artist.name, artist%>
 <% end%>

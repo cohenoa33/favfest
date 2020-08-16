@@ -1,6 +1,7 @@
-<h1> All Festival</h1>
-<ol>
+<h1> All Festivals</h1>
+
 <% @festivals.each do |festival| %>
+  <ul>
     <li> <%= link_to festival.name, festival %> </li>
+    </ul>
     <% end %>
-    </ol>
