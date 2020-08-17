@@ -9,15 +9,19 @@
   <title>Fav Fest</title>
 </head>
   <nav class="block" >
-  <a href="/festivals" class="button is-black is-outlined" > Login </a>
-   <a href="/festivals"class="button is-black is-outlined" > Sign Up </a>
-
+  <a href='/new' class="button is-black is-outlined" > Login </a>
+  <a href="/signup" class="button is-black is-outlined" > Sign Up </a>
   <a href="/festivals"class="button is-black is-outlined" > Festivals </a>
   <a href="/artists" class="button is-black is-outlined" > Artists</a>
-
+  <% if session[:user_id] %>
+  <%= button_to "Logout", sessions_path, method: "delete" %>
+  <% end %>
   </nav>
   <%= render :partial => 'festivals/search_box' %>
   
+  <% if session[:user_id] %>
+  Hi <%=Fan.find(session[:user_id]).username %>, to get started why don't you check out some festivals?
+  <% end %>
     <%= yield %>
   <body>
 

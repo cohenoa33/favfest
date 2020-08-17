@@ -1,0 +1,14 @@
+
+
+<%= form_with url: '/login' do %>
+	<%= label_tag :username %>
+	<%= text_field_tag :username %>
+
+	<%= label_tag :password %>
+	<%= password_field_tag :password %>
+
+	<%= submit_tag "Sign in" %>
+<% end %>
+<% if flash[:message] %>
+	<p strong style='color: red;'><%= flash[:message] %></p>
+<% end %>
