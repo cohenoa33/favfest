@@ -12,13 +12,9 @@
   <nav>
   <a href="/festivals">Home</a>
   <a href="/artists"> Artists</a>
-  <%= form_tag(search_page_path, :method => "get", class: 'navbar-form navbar-left') do %>  
-    <%= search_field_tag :search, params[:search], placeholder: "Search by state", class: "form-control" %>   
-    <%= button_tag "Search", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%> 
-    <% end %>
-    </nav>
-  
-      <%= yield %>
+  <%= render :partial => 'festivals/search_box' %>
+  </nav>
+    <%= yield %>
   <body>
 
 

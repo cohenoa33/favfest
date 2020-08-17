@@ -5,19 +5,14 @@ class Festival < ApplicationRecord
     has_many :fans, through: :favorites
     has_many :artists, through: :artist_festivals
 
-    validates :search, length: { minimum: 3 }
 
-    def self.search(search)
-        if search 
-            festivals = Festival.find_by(location: search)
-            if festivals
-                self.where(festival_id: festivals)
-            else 
-                Festival.all
-            end
-        else
-            Festival.all
+    def self.search (search)
+        key = "%#{search}%"
+        if search.empty? 
+            @festivals_search = nil
+        else 
+            @festivals_search = Festival.where('location LIKE :search OR name LIKE :search', search: key).order(:name)
         end
     end
-    
+
 end # class end

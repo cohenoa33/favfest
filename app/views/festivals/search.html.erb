@@ -1,17 +1,8 @@
-  <% if @results == nil  %>
-  
-  <% elsif @results.location.downcase == @parameter %>
-  <ul>
-      <li><%= link_to @results.name, @results  %><br></li>  
-    </ul>    
+<% if @festivals_search.blank? || @festivals_search == nil %>
+    <p> Could not find a matching, please try again </p>
+<% else %>
+  <h4> Results: </h4>
+    <% @festivals_search.each do |festival| %>
+    <%= link_to festival.name, festival %>
+    <% end %> 
   <% end %>
-
-
-  <% if !!flash[:errors] %>
-  <ul>
-  <% flash[:errors].each do |error|%>
-  <li> <%= error %> </li>
-  <% end %>
-  <% end %>
-  <br>
-        
