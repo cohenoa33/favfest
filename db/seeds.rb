@@ -6,10 +6,10 @@ Fan.delete_all
 Festival.delete_all
 
 #ORGANIZERS
-organizer1 = Organizer.new(name: "Live Nation")
-organizer2= Organizer.new(name: "Insomniac")
-organizer3 = Organizer.new(name: "SFX entertainment")
-organizer4 = Organizer.new(name: "AEG")
+# organizer1 = Organizer.new(username: "Live Nation")
+# organizer2= Organizer.new(Username: "Insomniac")
+# organizer3 = Organizer.new(username: "SFX entertainment")
+# organizer4 = Organizer.new(username: "AEG")
 
 
 #ARTISTS
@@ -18,28 +18,28 @@ artist1 = Artist.create(name: "Pearl Jam", genre:"Rock", artist_image: "https://
 artist2 = Artist.create(name: "Billie Eilish", genre:"Electropop", artist_image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Billie_Eilish_2019_by_Glenn_Francis_%28cropped%29_2.jpg/220px-Billie_Eilish_2019_by_Glenn_Francis_%28cropped%29_2.jpg", bio: "Billie Eilish Pirate Baird O'Connell (born December 18, 2001) is an American singer and songwriter. She first gained attention in 2015 when she uploaded the song 'Ocean Eyes' to SoundCloud, which was subsequently released by the Interscope Records subsidiary Darkroom. The song was written and produced by her brother Finneas, with whom she collaborates on music and live shows. Her debut EP, Don't Smile at Me (2017), became a sleeper hit, reaching the top 15 in the US, UK, Canada, and Australia.", video: "https://www.youtube.com/embed/DyDfgMOUjCI")
 artist3 = Artist.create(name: "Madonna", genre:"Pop", artist_image: "https://pagesix.com/wp-content/uploads/sites/3/2020/01/madonna-03.jpg?quality=90&strip=all&w=618&h=410&crop=1", bio: "Madonna Louise Ciccone ( born August 16, 1958) is an American singer-songwriter, actress, author, and record executive. Having been referred to as the 'Queen of Pop' since the 1980s, she is regarded as one of the most impactful figures in popular culture. Madonna is noted for her continual reinvention and versatility in music production, songwriting, and visual presentation. She has pushed the boundaries of artistic expression in mainstream music, while remaining completely in charge of every aspect of her career. Her works, which incorporate social, political, sexual, and religious themes, have generated both critical acclaim and controversy. Madonna is often cited as an influence by other artists.", video: "https://www.youtube.com/embed/xAxNaLAR2to")
 
-#FANS
-fan1 = Fan.create(name:"Ronak")
-fan2 = Fan.create(name:"Daniel")
-fan2 = Fan.create(name:"Noa")
-fan2 = Fan.create(name:"Brad")
+# #FANS
+# fan1 = Fan.create(name:"Ronak")
+# fan2 = Fan.create(name:"Daniel")
+# fan2 = Fan.create(name:"Noa")
+# fan2 = Fan.create(name:"Brad")
 
 #FESTIVALS
-festival1 = Festival.create(name: "Sasquatch", location: "Washington", organizer_id: 1, image_url: "https://upload.wikimedia.org/wikipedia/commons/4/48/Gorge_Amphitheatre.jpg", camping: true, start_date: DateTime.now + (rand * 365), end_date: DateTime.now + (rand * 365), description:"Sasquatch! Music Festival was an annual music festival held at The Gorge Amphitheatre in George, Washington. It took place on Memorial Day weekend, running for three to four days.")
-festival2 = Festival.create(name: "Bonaroo", location: "Tennessee", organizer_id: 2, image_url: "https://upload.wikimedia.org/wikipedia/en/2/2d/BonnarooDay.JPG", camping: true, start_date: DateTime.now + (rand * 365), end_date: DateTime.now + (rand * 365), description:"The Bonnaroo Music and Arts Festival is an American annual four-day music festival developed and produced by Superfly Presents and AC Entertainment. ... The festival features craftsmen and artisans selling unique products, food and drink vendors, comedy acts, silent disco, cinema experiences, and a Ferris wheel.")
-festival3 = Festival.create(name: "Shambhala", location: "British Columbia", organizer_id: 3, image_url: "https://i0.wp.com/thissongissick.com/wp-content/uploads/2019/09/AMP-Don-Idio.jpg?w=750&ssl=1", camping: true, start_date: DateTime.now + (rand * 365), end_date: DateTime.now + (rand * 365), description:"Shambhala Music Festival is an annual electronic music festival held during last week in July at the Salmo River Ranch, a 500-acre (2.0 km2) farm, in the West Kootenay mountains near Nelson, British Columbia, Canada. The festival lasts 4 days and 3 nights and offers a mix of music and art in nature.")
-festival4 = Festival.create(name: "Coachella", location: "California", organizer_id: 4, image_url: "https://9b16f79ca967fd0708d1-2713572fef44aa49ec323e813b06d2d9.ssl.cf2.rackcdn.com/1140x_a10-7_cTC/Music-Coachella-Stagecoach-1591853035.jpg", camping: true, start_date: DateTime.now + (rand * 365), end_date: DateTime.now + (rand * 365), description:"The Coachella Valley Music and Arts Festival (commonly called Coachella or the Coachella Festival) is an annual music and arts festival held at the Empire Polo Club in Indio, California, in the Coachella Valley in the Colorado Desert.")
+festival1 = Festival.create(name: "Sasquatch", location: "Washington", organizer_id: 1, image_url: "https://upload.wikimedia.org/wikipedia/commons/4/48/Gorge_Amphitheatre.jpg", start_date: DateTime.now + (rand * 365), duration: rand(5), description:"Sasquatch! Music Festival was an annual music festival held at The Gorge Amphitheatre in George, Washington. It took place on Memorial Day weekend, running for three to four days.")
+festival2 = Festival.create(name: "Bonaroo", location: "Tennessee", organizer_id: 2, image_url: "https://upload.wikimedia.org/wikipedia/en/2/2d/BonnarooDay.JPG", start_date: DateTime.now + (rand * 365), duration: rand(5), description:"The Bonnaroo Music and Arts Festival is an American annual four-day music festival developed and produced by Superfly Presents and AC Entertainment. ... The festival features craftsmen and artisans selling unique products, food and drink vendors, comedy acts, silent disco, cinema experiences, and a Ferris wheel.")
+festival3 = Festival.create(name: "Shambhala", location: "British Columbia", organizer_id: 3, image_url: "https://i0.wp.com/thissongissick.com/wp-content/uploads/2019/09/AMP-Don-Idio.jpg?w=750&ssl=1", start_date: DateTime.now + (rand * 365), duration: rand(5), description:"Shambhala Music Festival is an annual electronic music festival held during last week in July at the Salmo River Ranch, a 500-acre (2.0 km2) farm, in the West Kootenay mountains near Nelson, British Columbia, Canada. The festival lasts 4 days and 3 nights and offers a mix of music and art in nature.")
+festival4 = Festival.create(name: "Coachella", location: "California", organizer_id: 4, image_url: "https://9b16f79ca967fd0708d1-2713572fef44aa49ec323e813b06d2d9.ssl.cf2.rackcdn.com/1140x_a10-7_cTC/Music-Coachella-Stagecoach-1591853035.jpg", start_date: DateTime.now + (rand * 365), duration: rand(5), description:"The Coachella Valley Music and Arts Festival (commonly called Coachella or the Coachella Festival) is an annual music and arts festival held at the Empire Polo Club in Indio, California, in the Coachella Valley in the Colorado Desert.")
 
 
-favorite1 = Favorite.create(fan_id: Fan.all.sample.id, festival_id: Festival.all.sample.id, wishlist: true, comment: "no comment")
-favorite2 = Favorite.create(fan_id: Fan.all.sample.id, festival_id: Festival.all.sample.id, wishlist: true)
-favorite3 = Favorite.create(fan_id: Fan.all.sample.id, festival_id: Festival.all.sample.id, wishlist: true, comment: "Whatever")
-favorite4 = Favorite.create(fan_id: Fan.all.sample.id, festival_id: Festival.all.sample.id, wishlist: true, comment: "Love it")
-favorite5 = Favorite.create(fan_id: Fan.all.sample.id, festival_id: Festival.all.sample.id, wishlist: false, comment: "Meh")
-favorite6 = Favorite.create(fan_id: Fan.all.sample.id, festival_id: Festival.all.sample.id, wishlist: false)
-favorite7 = Favorite.create(fan_id: Fan.all.sample.id, festival_id: Festival.all.sample.id, wishlist: true, comment: "Whatever")
-favorite8 = Favorite.create(fan_id: Fan.all.sample.id, festival_id: Festival.all.sample.id, wishlist: false)
-favorite0 = Favorite.create(fan_id: Fan.all.sample.id, festival_id: Festival.all.sample.id, wishlist: false)
+# favorite1 = Favorite.create(fan_id: Fan.all.sample.id, festival_id: Festival.all.sample.id, wishlist: true, comment: "no comment")
+# favorite2 = Favorite.create(fan_id: Fan.all.sample.id, festival_id: Festival.all.sample.id, wishlist: true)
+# favorite3 = Favorite.create(fan_id: Fan.all.sample.id, festival_id: Festival.all.sample.id, wishlist: true, comment: "Whatever")
+# favorite4 = Favorite.create(fan_id: Fan.all.sample.id, festival_id: Festival.all.sample.id, wishlist: true, comment: "Love it")
+# favorite5 = Favorite.create(fan_id: Fan.all.sample.id, festival_id: Festival.all.sample.id, wishlist: false, comment: "Meh")
+# favorite6 = Favorite.create(fan_id: Fan.all.sample.id, festival_id: Festival.all.sample.id, wishlist: false)
+# favorite7 = Favorite.create(fan_id: Fan.all.sample.id, festival_id: Festival.all.sample.id, wishlist: true, comment: "Whatever")
+# favorite8 = Favorite.create(fan_id: Fan.all.sample.id, festival_id: Festival.all.sample.id, wishlist: false)
+# favorite0 = Favorite.create(fan_id: Fan.all.sample.id, festival_id: Festival.all.sample.id, wishlist: false)
 
 
 ar1 = ArtistFestival.create(artist_id: Artist.all.sample.id, festival_id: Festival.all.sample.id)

@@ -32,11 +32,9 @@ ActiveRecord::Schema.define(version: 2020_08_14_224710) do
   end
 
   create_table "fans", force: :cascade do |t|
-    t.string "name"
+    t.string "username"
     t.string "password_digest"
     t.string "email"
-    t.datetime "birthday"
-    t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -57,16 +55,15 @@ ActiveRecord::Schema.define(version: 2020_08_14_224710) do
     t.string "location"
     t.integer "organizer_id"
     t.string "image_url"
-    t.boolean "camping"
     t.datetime "start_date"
-    t.datetime "end_date"
+    t.integer "duration"
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "organizers", force: :cascade do |t|
-    t.string "name"
+    t.string "username"
     t.string "email"
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
