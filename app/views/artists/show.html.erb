@@ -1,15 +1,38 @@
-<h1><%= @artist.name%></h1>
-<b>Genre:</b> <%= @artist.genre %>
-<br>
-Festivals:
-<br>
- <ul> <% @artist.festivals.uniq.each do |festival|%>
-<li> <%= link_to festival.name, festival %> </li>
-<%end%>
-</ul>
-<br>
-<p><%= @artist.bio%></p>
-<p><%= link_to "Video", @artist.video, :target => "_blank" %></p>
-<br>
-
-<img src="<%=@artist.artist_image%>" alt= "" width=35% >
+<div class="tile is-ancestor">
+  <div class="tile is-vertical is-8">
+    <div class="tile">
+      <div class="tile is-parent is-vertical">
+        <article class="tile is-child notification ">
+          <p class="title"><%= @artist.name%></p>
+          <p class="subtitle"><%= @artist.genre%></p>
+        </article>
+        <article class="tile is-child notification ">
+          <p class="title">Festivals</p>
+          <p class="subtitle">
+          <ul> <% @artist.festivals.uniq.each do |festival|%>
+            <li> <%= link_to festival.name, festival %> </li>
+            <%end%>
+            </ul>
+          </p>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child notification">
+          <figure class="image is-4by3">
+            <img src="<%=@artist.artist_image%> ">
+          </figure>
+        </article>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child notification ">
+        <p class="title">Bio</p>
+        <div class="content">
+        <%=@artist.bio%> 
+        </div>
+      </article>
+    </div>
+  </div>
+  </div>
+  
+  <iframe class="has-ratio" width="640" height="360" src=<%=@artist.video%> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

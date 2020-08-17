@@ -8,12 +8,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
   <title>Fav Fest</title>
 </head>
-  <nav class="nav-center">
-  <a href="/festivals"class="button is-focused"> Festivals </a>
-  <a href="/artists" class="button is-focused"> Artists</a>
+  <nav class="block" >
+  <a href="/login" class="button is-black is-outlined" > Login </a>
+   <a href="/signup"class="button is-black is-outlined" > Sign Up </a>
 
-  <%= render :partial => 'festivals/search_box' %>
+  <a href="/festivals"class="button is-black is-outlined" > Festivals </a>
+  <a href="/artists" class="button is-black is-outlined" > Artists</a>
+
   </nav>
+  <%= render :partial => 'festivals/search_box' %>
+  
     <%= yield %>
   <body>
 
