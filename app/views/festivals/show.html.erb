@@ -1,10 +1,8 @@
 <h1><%= @festival.name%></h1>
 <b>location:</b> <%= @festival.location %>
 <br>
-<b>Is there camping?</b> <%=@festival.camping%></b>
-<br>
-<b> Starts at:</b> <%=@festival.start_date.strftime("%m/%d/%Y")%> <br>
-<b> Ends at:</b> <%= @festival.end_date.strftime("%m/%d/%Y")%></b>
+
+<b> Starts at:</b> <%=@festival.start_date.strftime("%m/%d/%Y")%> <b> duration:</b> <%=@festival.duration%> days.
 <br>
 
 <% @festival.artists.uniq.each do |artist|%>
