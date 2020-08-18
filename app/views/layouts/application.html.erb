@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
-  <title>Fav Fest</title>
+ <title>Fav Fest</title>
 </head>
   <nav class="block" >
   <a href='/new' class="button is-black is-outlined" > Login </a>
@@ -22,8 +20,8 @@
   <% if session[:user_id] %>
   Hi <%=Fan.find(session[:user_id]).username %>, to get started why don't you check out some festivals?
   <% end %>
-    <%= yield %>
   <body>
+<%= yield %> 
 
 
   </body>

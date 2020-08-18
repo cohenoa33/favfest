@@ -5,6 +5,7 @@ class FavoritesController < ApplicationController
     def create
         if already_added_to_wishlist?
             flash[:notice] = "You can't add to wishlist more than once"
+            redirect_to @festival
         else
             @wishlist = @festival.favorites.create(fan_id: current_fan.id)
             # byebug
@@ -22,7 +23,6 @@ class FavoritesController < ApplicationController
     redirect_to @festival
     end
 
-    
     def already_added_to_wishlist?
         Favorite.where(fan_id: current_fan.id, festival_id:
         params[:festival_id]).exists?
@@ -35,7 +35,9 @@ class FavoritesController < ApplicationController
     end
 
     def find_favorite
+     
         @favorite = @festival.favorites.find(params[:id])
-    end
+        @favorite_id = @favorite.id
+      end
 
 end

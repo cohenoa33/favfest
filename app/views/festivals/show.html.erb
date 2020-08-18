@@ -10,12 +10,15 @@
 <% end%>
 
 <p><%= @festival.description%></p>
+<% if @favorite_id.blank? %>
+  <%= button_to 'Add to Wishlist', festival_favorites_path(@festival), method: :post %>
+  <% else %>
+<%= button_to 'remove from Wishlist', festival_favorite_path(@festival, @favorite_id), method: :delete %>
+<% end %>
 
-
-<%= button_to 'remove from Wishlist', festival_favorites_path(@festival), method: :delete %>
-
-<%= button_to 'Add to Wishlist', festival_favorites_path(@festival), method: :post %>
-
+<% if flash[:notice] %>
+<%= flash[:notice] %>
+<%end %>
 
 <br>
 <img src="<%=@festival.image_url%>" alt= "" width=75% >

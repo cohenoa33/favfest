@@ -12,4 +12,5 @@ class ApplicationController < ActionController::Base
     redirect_to festivals_path if !logged_in?
   end
 
+  
 end
