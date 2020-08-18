@@ -1,11 +1,11 @@
 class ApplicationController < ActionController::Base
 
-  def current_user
-    @current_user ||= Fan.find_by(id: session[:user_id])
+  def current_fan
+    @current_fan ||= Fan.find_by(id: session[:user_id])
   end
 
   def logged_in?
-    !!current_user
+    !!current_fan
   end
 
   def authorized

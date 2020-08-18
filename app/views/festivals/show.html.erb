@@ -6,14 +6,17 @@
 <br>
 
 <% @festival.artists.uniq.each do |artist|%>
-
     <%= link_to artist.name, artist%>
 <% end%>
-
 
 <p><%= @festival.description%></p>
 
 
+<%= button_to 'remove from Wishlist', festival_favorites_path(@festival), method: :delete %>
 
+<%= button_to 'Add to Wishlist', festival_favorites_path(@festival), method: :post %>
+
+
+<br>
 <img src="<%=@festival.image_url%>" alt= "" width=75% >
 

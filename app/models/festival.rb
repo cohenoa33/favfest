@@ -1,12 +1,12 @@
 class Festival < ApplicationRecord
-
-    has_many :favorites
+    has_many :favorites, dependent: :destroy
     has_many :artist_festivals
     has_many :fans, through: :favorites
     has_many :artists, through: :artist_festivals
 
 
     def self.search (search)
+        search = search.titleize
         key = "%#{search}%"
         if search.empty? 
             @festivals_search = nil

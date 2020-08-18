@@ -1,15 +1,13 @@
 class SessionsController < ApplicationController
     # before_action :authorized, except: [:new, :create]
-	# before_action :current_user, except: [:new, :create]
+	# before_action :current_fan, except: [:new, :create]
 	
 	def new
 	end
 
 	def create
 		@fan = Fan.find_by(username: params[:username])
-
 		if @fan && @fan.authenticate(params[:password])
-
 			session[:user_id] = @fan.id
 			redirect_to festivals_path
 		else

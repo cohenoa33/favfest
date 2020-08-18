@@ -1,6 +1,6 @@
 class FansController < ApplicationController
         # before_action :authorized, except: [:new, :create]
-        # before_action :current_user, except: [:new, :create]
+        # before_action :current_fan, except: [:new, :create]
 
         def new
         @fan = Fan.new
@@ -8,7 +8,6 @@ class FansController < ApplicationController
 
         def create
         @fan = Fan.new(fan_params)
-
             if @fan.save
                 session[:user_id] = @fan.id 
                 redirect_to festivals_path
