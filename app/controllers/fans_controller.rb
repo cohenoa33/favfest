@@ -1,6 +1,6 @@
 class FansController < ApplicationController
-        # before_action :authorized, except: [:new, :create]
-        # before_action :current_fan, except: [:new, :create]
+        before_action :authorized, except: [:new, :create]
+        before_action :current_fan, except: [:new, :create]
 
         def new
         @fan = Fan.new
@@ -18,7 +18,8 @@ class FansController < ApplicationController
         end
     
         def show
-            @fan = Fan.find(params[:id])
+            # byebug
+            @fan = Fan.find(@current_fan.id)
         end
 
         def index

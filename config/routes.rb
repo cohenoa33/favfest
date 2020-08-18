@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  get '/search', to:'festivals#search', :as => 'search_page'
+  get '/search', to:'festivals#search',as: 'search_page'
   get '/signup', to:'fans#new', as: 'signup'
   get '/new', to: 'sessions#new', as: 'new'
   post '/login', to: 'sessions#create', as: 'login'
+  get '/wishlist', to:'fans#show', as: 'wishlist'
   # post '/', to: 'favorites#create', as: 'favorite'
   delete '/sessions', to: 'sessions#destroy'
   resources :artists, only: [:index, :show]

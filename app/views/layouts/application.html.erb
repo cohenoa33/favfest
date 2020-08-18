@@ -11,6 +11,7 @@
   <a href="/signup" class="button is-black is-outlined" > Sign Up </a>
   <a href="/festivals"class="button is-black is-outlined" > Festivals </a>
   <a href="/artists" class="button is-black is-outlined" > Artists</a>
+  <a href="/wishlist" class="button is-black is-outlined" > Festival Wishlist</a>
   <% if session[:user_id] %>
   <%= button_to "Logout", sessions_path, method: "delete" %>
   <% end %>
