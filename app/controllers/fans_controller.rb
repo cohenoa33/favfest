@@ -18,7 +18,6 @@ class FansController < ApplicationController
         end
     
         def show
-            # byebug
             @fan = Fan.find(@current_fan.id)
         end
 

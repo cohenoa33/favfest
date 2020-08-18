@@ -2,4 +2,9 @@
 
 <% @fan.festivals.each do |festival| %>
     <%= link_to festival.name, festival %>
+   
 <%end%>
+
+<% @fan.favorites.each do |favorite|%>
+    <%= favorite.comment%>
+<% end %>

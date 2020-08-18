@@ -12,9 +12,18 @@
 <p><%= @festival.description%></p>
 <% if @favorite_id.blank? %>
   <%= button_to 'Add to Wishlist', festival_favorites_path(@festival), method: :post %>
+  
   <% else %>
-<%= button_to 'remove from Wishlist', festival_favorite_path(@festival, @favorite_id), method: :delete %>
+<%= form_with model: @favorite, url: festival_favorite_path(@festival, @favorite_id), method: :patch do |f|%>
+    <%= f.text_area :comment, placeholder: "Add comment here"%>
+    <%= f.submit%>
 <% end %>
+<%= button_to 'remove from Wishlist', festival_favorite_path(@festival, @favorite_id), method: :delete %>
+
+<% end %>
+
+
+
 
 <% if flash[:notice] %>
 <%= flash[:notice] %>
