@@ -1,0 +1,5 @@
+<div id ="hello">
+<% if session[:user_id] %>
+ Hi <%=Fan.find(session[:user_id]).username %>! to get started why don't you check out some of these festivals?
+<% end %>
+<div/>

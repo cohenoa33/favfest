@@ -14,11 +14,7 @@
 
   <body>
   <%= render :partial => 'festivals/nav' %>
-   <%= render :partial => 'festivals/search_box' %>
-  
-  <% if session[:user_id] %>
-  <p>Hi <%=Fan.find(session[:user_id]).username %>! to get started why don't you check out some of these festivals?<p>
-  <% end %>
+  <%= render :partial => 'fans/hello' %>
   <main> <%= yield %>  </main>
 
 

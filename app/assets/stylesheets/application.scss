@@ -17,7 +17,8 @@
 *{ 
     margin: 0;
     padding: 0;
-    color: red;
+    color: black;
+    text-decoration: none;
     box-sizing: border-box;
     font-family: 'Comfortaa', cursive;
 }
@@ -94,11 +95,14 @@ nav ul .search-icon .icon {
 nav ul .search-icon .icon:hover {
     background: #e6e6e6;
 }
-nav ul .search-icon .icon span{
+nav ul .search-icon .icon button{
     color: #222222;
-    font-size: 18px;
-    color: whitesmoke;
-
+    font-size: 100%;
+    border: 0px;
+    background: darkgray;
+}
+nav ul .search-icon .icon button:hover {
+    background: #e6e6e6;
 }
 @media screen and (max-width: 1052px) {
     nav {

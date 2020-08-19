@@ -17,11 +17,11 @@
         <li>  <a href="/artists" class="button" > Artists</a></li>
       </div>
     <li class="search-icon"> 
-    <%= form_tag search_page_path, method: :get, class: 'search_bar' do %> 
+    <%= form_tag search_page_path, method: :get, class: 'search_bar', id:'search_button' do %> 
       <input type="search"  <%= text_field_tag :search, params[:search], class: 'input', placeholder: "search..."%>
       <% end %>
       <label class="icon" >
-      <span class="fas fa-search"></span>
+      <button class="fas fa-search" form="search_button"></button>
       </label>
     </li>
     </ul>
