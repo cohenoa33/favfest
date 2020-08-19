@@ -1,35 +1,34 @@
 class FansController < ApplicationController
-        before_action :authorized, except: [:new, :create]
-        before_action :current_fan, except: [:new, :create]
+before_action :authorized, except: [:new, :create]
+before_action :current_fan, except: [:new, :create]
 
-        def new
+    def new
         @fan = Fan.new
-        end
+    end
 
-        def create
+    def create
         @fan = Fan.new(fan_params)
-            if @fan.save
-                session[:user_id] = @fan.id 
-                redirect_to festivals_path
-            else
-                flash[:errors] = @fan.errors.full_messages
-                redirect_to signup_path
-            end
+        if @fan.save
+            session[:user_id] = @fan.id 
+            redirect_to festivals_path
+        else
+            flash[:errors] = @fan.errors.full_messages
+            redirect_to signup_path
         end
-    
-        def show
-            @fan = Fan.find(@current_fan.id)
-            # byebug
-        end
+    end
 
-        def index
+    def show
+        @fan = Fan.find(@current_fan.id)
+    end
+
+    def index
         @fans = Fan.all
-        end
+    end
 
-        private
+    private
 
-        def fan_params
+    def fan_params
         params.require(:fan).permit(:username, :password, :password_confirmation)
-        end
+    end
 
 end

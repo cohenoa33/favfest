@@ -1,0 +1,10 @@
+<% if @search.blank? || @search == nil %>
+    <p> Could not find a matching, please try again </p>
+<% else %>
+  <h4> Results: </h4>
+  <ul>
+    <% @search.each do |result| %>
+  <li> <%= link_to result.name, result %> </li>
+    <% end %> 
+  <% end %>
+  </ul>

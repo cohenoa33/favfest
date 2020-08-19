@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/search', to:'festivals#search',as: 'search_page'
+  get '/search', to:'artist_festivals#search',as: 'search_page'
   get '/signup', to:'fans#new', as: 'signup'
   get '/new', to: 'sessions#new', as: 'new'
   post '/login', to: 'sessions#create', as: 'login'
@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
 
   # resources :organizers
-  # resources :artist_festivals
+  resources :artist_festivals
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
 

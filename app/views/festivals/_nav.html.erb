@@ -18,7 +18,7 @@
       </div>
     <li class="search-icon"> 
     <%= form_tag search_page_path, method: :get, class: 'search_bar' do %> 
-      <input type="search"  <%= text_field_tag :location, params[:search], class: 'input', placeholder: "festival name or state"%>
+      <input type="search"  <%= text_field_tag :search, params[:search], class: 'input', placeholder: "festival name or state"%>
       <% end %>
       <label class="icon" >
       <span class="fas fa-search"></span>

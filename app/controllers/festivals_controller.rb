@@ -1,7 +1,6 @@
 class FestivalsController < ApplicationController
     # before_action :find_favorite, only: [:show]
 
-
     def index
         @festivals = Festival.all
     end
@@ -11,19 +10,13 @@ class FestivalsController < ApplicationController
         @current_fan = current_fan
         if current_fan != nil
             @favorite = @festival.favorites.find_by(fan_id: @current_fan.id)
-                if !@favorite.blank?
+            if !@favorite.blank?
                 @favorite_id = @favorite.id
-         end
+            end
         end
-        # byebug
-    end
-    
-    def search
-        @festivals_search = Festival.search(params[:location])
     end
 
 private
-
     def festival_params
         params.require(:festival).permit(:name, :location, :organizer_id, :image_url, :start_date, :duration, :description, :search)
     end
