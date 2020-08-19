@@ -10,16 +10,17 @@
 <% end%>
 
 <p><%= @festival.description%></p>
+
   <%if @current_fan != nil %>
-    <% if @favorite_id.blank? %>
-    <%= button_to 'Add to Wishlist', festival_favorites_path(@festival), method: :post %>
-    <% else %>
-    <%= form_with model: @favorite, url: festival_favorite_path(@festival, @favorite_id), method: :patch do |f|%>
-    <%= f.text_area :comment, placeholder: "Add comment here"%>
-    <%= f.submit%>
+      <% if @favorite_id.blank? %>
+          <%= button_to 'Add to Wishlist', festival_favorites_path(@festival), method: :post %>
+          <% else %>
+          <%= form_with model: @favorite, url: festival_favorite_path(@festival, @favorite_id), method: :patch do |f|%>
+          <%= f.text_area :comment, placeholder: "Add comment here"%>
+         <%= f.submit%>
+      <% end %>
+    <%= button_to 'remove from Wishlist', festival_favorite_path(@festival, @favorite_id), method: :delete %>
   <% end %>
-<% end %>
-<%= button_to 'remove from Wishlist', festival_favorite_path(@festival, @favorite_id), method: :delete %>
 
 <% end %>
 

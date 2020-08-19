@@ -19,6 +19,7 @@ class FansController < ApplicationController
     
         def show
             @fan = Fan.find(@current_fan.id)
+            # byebug
         end
 
         def index

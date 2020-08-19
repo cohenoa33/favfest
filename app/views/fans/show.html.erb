@@ -1,5 +1,6 @@
 <h1>Festival Wishlist</h1>
 
+
 <% @fan.festivals.each do |festival| %>
     <%= link_to festival.name, festival %>
    
@@ -8,3 +9,7 @@
 <% @fan.favorites.each do |favorite|%>
     <%= favorite.comment%>
 <% end %>
+
+
+
+
