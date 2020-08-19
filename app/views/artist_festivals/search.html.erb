@@ -1,0 +1,12 @@
+<h1>Search Results</h1>
+
+<% if @artist_festival.blank? || @artist_festival == nil %>
+    <p> Looks like we couldn't find a matching result, please try again. </p>
+<% else %>
+  <h4> Results: </h4>
+    <% @artist_festival.each do |af| %>
+    <%= link_to af.name, af %>
+    <% end %> 
+
+   
+  <% end %>
