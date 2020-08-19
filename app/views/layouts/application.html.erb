@@ -1,28 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <title>Fav Fest</title>
-</head>
-  <nav class="block" >
-  <a href='/new' class="button is-black is-outlined" > Login </a>
-  <a href="/signup" class="button is-black is-outlined" > Sign Up </a>
-  <a href="/festivals"class="button is-black is-outlined" > Festivals </a>
-  <a href="/artists" class="button is-black is-outlined" > Artists</a>
-  <a href="/wishlist" class="button is-black is-outlined" > Festival Wishlist</a>
-  <% if session[:user_id] %>
-  <%= button_to "Logout", sessions_path, method: "delete" %>
-  <% end %>
-  </nav>
-  <%= render :partial => 'festivals/search_box' %>
+<html>
+  <head>
+  
+    <title>FavFest</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@515&display=swap" rel="stylesheet">
+
+  <body>
+  <%= render :partial => 'festivals/nav' %>
+   <%= render :partial => 'festivals/search_box' %>
   
   <% if session[:user_id] %>
-  Hi <%=Fan.find(session[:user_id]).username %>, to get started why don't you check out some festivals?
+  <p>Hi <%=Fan.find(session[:user_id]).username %>! to get started why don't you check out some of these festivals?<p>
   <% end %>
-  <body>
-<%= yield %> 
+  <main> <%= yield %>  </main>
 
 
   </body>
