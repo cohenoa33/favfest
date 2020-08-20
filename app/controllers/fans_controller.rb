@@ -25,6 +25,9 @@ class FansController < ApplicationController
         @fans = Fan.all
         end
 
+        def alphabetical_order
+            redirect_to '/alphabetical'
+        end
         private
 
         def fan_params

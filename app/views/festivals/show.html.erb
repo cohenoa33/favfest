@@ -6,7 +6,7 @@
         <div class="festival_information" >
           <div class="festival_attribute">
             <p class="festival_attribute"> Location:  <%= @festival.location %> <br> </p>
-            <p class="festival_attribute"> Starts at: <%=@festival.start_date.strftime("%m/%d/%Y")%> <br> </p>
+            <p class="festival_attribute"> Starts at: <%=@festival.date %> <br> </p>
             <p class="festival_attribute"> Duration: <%=@festival.duration%> days <br>  </p>
           </div>
         <br>
@@ -36,7 +36,7 @@
     </div>  
     <br>
     <span class="festivals_artist">
-      <% @festival.artists.order(:name).uniq.each do |artist|%>
+      <% @festival.uniq_artists.each do |artist|%>
       <%=link_to artist.name, artist%> | 
         <% end%>
   </span>
@@ -49,7 +49,7 @@
   <br>
   <p class="festival_comments"> Checkout what other fans are saying:<br>
     
-    <% @festival.favorites.each do |f|  %>
+    <% @festival.updated_at.each do |f|  %>
       <%=  f.fan.username %>
       said "<%=  f.comment %>"<br>
     <%  end %> 
