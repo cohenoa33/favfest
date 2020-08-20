@@ -1,20 +1,17 @@
+<div class="form">
 <%= form_with model: @fan, url: '/fans', method: 'POST' do |f| %>
 
-  <%= f.label :username %>
-  <%= f.text_field :username %>
-
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
-
-  <%= f.submit "sign up" %>
+  <%= f.text_field :username, class: "signup", placeholder: "Username"%>
+  <%= f.password_field :password, class: "signup",placeholder: "Password" %>
+  <%= f.password_field :password_confirmation, class: "signup" ,placeholder: "Password Confirmation"%>
+  <%= f.submit "sign up", class:'signup'%>
 <% end %>
 
+<ul class="errors">
 <% if flash[:errors] %>
-  <% flash[:errors].each do |e| %>
-    <strong style='color: red;'><%= e %></strong>
-    <br/><br/>
+  <% flash[:errors].each do |e| %> 
+    <li> <%= e %> </li>
   <% end %>
 <% end %>
+</ul>
+</div>

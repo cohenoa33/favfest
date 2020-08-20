@@ -1,10 +1,10 @@
 <div id="festivals">
-<% @festivals.each do |festival| %>
+  <% @festivals.each do |festival| %>
     <div class="festival"> 
       <div class="info">
       <h2> <%=link_to festival.name, festival %> </h2>
       <p class="location"><%= festival.location %></p>
       </div>
   <img src="<%=festival.image_url %>" alt="">
-   </div>
+  </div>
   <% end %>

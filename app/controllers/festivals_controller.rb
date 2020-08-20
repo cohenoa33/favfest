@@ -1,9 +1,8 @@
 class FestivalsController < ApplicationController
     # before_action :find_favorite, only: [:show]
 
-
     def index
-        @festivals = Festival.all
+        @festivals = Festival.all.order(:name)
     end
     
     def show
@@ -15,7 +14,6 @@ class FestivalsController < ApplicationController
                 @favorite_id = @favorite.id
          end
         end
-        # byebug
     end
     
 

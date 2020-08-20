@@ -2,13 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-body {
-	background-image: url('https://st2.depositphotos.com/4060975/8159/v/950/depositphotos_81594344-stock-illustration-music-outline-seamless-iconic-pattern.jpg');
-	margin: 0;
-	padding: 45px;
-	// max-width: 1100px;
-	margin: 0 auto;
-}
+
 #festivals {
 
 	margin-top: 5%;
@@ -43,10 +37,9 @@ body {
 			.location {
 				color: grey;
 			}
-
-			.attribute-wrapper {
-				padding: 10px 0;
-			}
+			// .attribute-wrapper {
+			// 	padding: 10px 0;
+			// }
 		}
 	}
 
@@ -63,8 +56,72 @@ body {
 	}
 }
 
-@media only screen and (max-width: 800px) {
-	#pets {
-		grid-template-columns: 1fr;
-  }
+
+#festivals_show{
+	margin-top: 20px;
+	background: darkgrey;
+	padding: 10px;
+	display: grid;
+	grid-template-columns: 1fr;
+	// border: 1px solid lightgrey;
+	border-radius: 10px;
+	
+	.festival_show{
+		margin-top: 10px;
+		padding: 15px;
+		background: #222222;
+		text-align: center;
+		border-radius: 10px;
+		color: whitesmoke;
+		}
+
+	.festival_info{	
+		margin-top: 10px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		padding: 15px;
+		border-bottom-left-radius: 10px;
+		border-top-left-radius: 10px;
+        -webkit-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+        -moz-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+        box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+		border-radius: 10px;
+
+		.festival_description {
+			font-size: 90%;
+			padding: 15px;
+			line-height: 200%;
+			// border-radius: 10px;
+            background-color: #e6e5e5;
+            -webkit-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+            -moz-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+            box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+
+				
+			
+			}
+		
+			img	{
+				width: 100%;
+				height: 300px;
+				object-fit: cover;
+				background-color: lightgrey;
+				border-radius: 10px;
+				// -webkit-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+				// -moz-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+				// box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+				
+				}  
+
+			p.fes_title {
+				font-size: 100%;
+				font-weight: bolder;
+			}
+
+	
+		}
+	.festivals_artist li a{
+		color: yellow;
+	}
+	
 }

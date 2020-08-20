@@ -1,3 +1,44 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.form {
+    margin-top: 3%;
+    justify-content: center;
+    grid-gap: 2px;
+    padding: 15px;
+	border-radius: 10px;
+    background-color: #000000;
+    -webkit-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+    box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+
+
+         
+    .signin {
+            height: 30px;
+            justify-content: center;
+            border: 1px black solid;
+            outline: none;
+            padding: 0 10px;
+            color: #000;
+            font-size: 16px;
+            text-align: center;
+        }
+  
+        
+    }
+
+    li {
+        color: red
+    }
+
+    table {
+        background-color: pink;
+        border-collapse: collapse;
+        width: 100%;
+       
+      }
+      
+      table, th, td tr{
+        color: black;
+      }

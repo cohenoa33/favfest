@@ -21,6 +21,14 @@
     text-decoration: none;
     box-sizing: border-box;
     font-family: 'Comfortaa', cursive;
+ 
+    
+}
+body {
+	background-image: url('https://st2.depositphotos.com/4060975/8159/v/950/depositphotos_81594344-stock-illustration-music-outline-seamless-iconic-pattern.jpg');
+    padding: 45px;
+    max-width: 1100px;
+	margin: 0 auto;
 }
 
 nav {
@@ -29,6 +37,10 @@ nav {
     border: 1px solid #000;
     border-left: none;
     border-right: none;
+    border-radius: 10px;
+    -webkit-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+    box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
   
 }
 nav ul {
@@ -107,7 +119,6 @@ nav ul .search-icon .icon button:hover {
 @media screen and (max-width: 1052px) {
     nav {
         padding: 10px 40px 10px 0px;
-
     }
     nav ul li.logo{
         display: none;
@@ -115,10 +126,12 @@ nav ul .search-icon .icon button:hover {
     nav ul div.items {
         flex: 4;
     }
-
+    #festivals {
+            grid-template-columns: 1fr;
+    }
 
 }
-img {
-    max-width: 450px;
-    height: auto;
-  }
+// img {
+//     max-width: 450px;
+//     height: auto;
+//   }

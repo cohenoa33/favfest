@@ -1,7 +1,12 @@
-<h1> Artists</h1>
-<ol>
-<% @artists.each do |artist| %>
-    <li> <%= link_to artist.name, artist %> </li>
+<div id="artists">
+    <% @artists.each do |artist| %>
+    <div class="artist">
+        <div class="info">
+            <h2> <%= link_to artist.name, artist %> </h2>
+                <p class="genre"><%= artist.genre%></p>
+        </div>
+    <img src="<%=artist.artist_image%>" alt="">
+       </div>
     <% end %>
-</ol>
+    
 

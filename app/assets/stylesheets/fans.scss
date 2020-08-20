@@ -1,3 +1,89 @@
 // Place all the styles related to the fans controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.form {
+    margin-top: 3%;
+    justify-content: center;
+    grid-gap: 2px;
+    padding: 15px;
+	border-radius: 10px;
+    background-color: #000000;
+    -webkit-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+    box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+
+
+         
+    .signup {
+            height: 30px;
+            justify-content: center;
+            border: 1px black solid;
+            outline: none;
+            padding: 0 10px;
+            color: #000;
+            font-size: 16px;
+            text-align: center;
+        }
+        
+    }
+
+    li {
+        color: red
+    }
+
+.wishlist{
+    margin: 5px;
+    text-align: center;
+    vertical-align: center;
+    background-color: lightgray;
+    padding: 5%;
+    border-radius: 10px;
+    -webkit-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+    box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+
+    h1 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-shadow: 2px 2px grey;
+    }
+
+    .title {
+        margin-top: 10px;
+        background-color:#c5c3c3;
+        border-radius: 10px;
+        -webkit-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+        -moz-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+        box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+
+        h3 {
+
+            padding-top: 10px;
+            text-shadow: 2px 2px darkgrey
+        }
+
+    
+        p {
+           color: rgb(151, 113, 124);
+        }
+
+        img {
+            border-radius: 10px;
+            -webkit-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+            -moz-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+            box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+        }
+    }
+    .data {
+        padding-top: 10px;
+        margin-top: 10px;
+        color: grey; 
+        color: black;
+        width: 700;
+        height: auto;
+    }
+}
+
+
