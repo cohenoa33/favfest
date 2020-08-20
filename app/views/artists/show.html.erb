@@ -13,7 +13,7 @@
 <br>
   <span class="artist_show_festivals">
      <%# Festivals %>
-   <% @artist.festivals.order(:name).uniq.each do |festival|%>
+   <% @artist.shows.each do |festival|%>
     <%= link_to festival.name, festival %> |
     <%end%>
    </span>
