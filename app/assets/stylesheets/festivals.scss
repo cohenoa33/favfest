@@ -148,19 +148,24 @@
 		}
 
 		.festivals_artist{
-			color: black;
-			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+			padding: 15px;
+			color: whitesmoke;
+			background-color: 413448;
+			text-align: center;
 
-			img	{
-				width: 20%;
-				object-fit: cover;
-				background-color: lightgrey;
-				border-radius: 10px;
+			// .festival_artist {
+				
+			// img	{
+			// 	width: 10%;
+			// 	object-fit: cover;
+			// 	background-color: lightgrey;
+			// 	border-radius: 10px;
 				// -webkit-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
 				// -moz-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
 				// box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
 				
-			}  
+			// }  
+			// }
 		}
 
 		.festival_description {

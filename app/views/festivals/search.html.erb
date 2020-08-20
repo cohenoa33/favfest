@@ -1,8 +1,0 @@
-<% if @festivals_search.blank? || @festivals_search == nil %>
-    <p> Could not find a matching, please try again </p>
-<% else %>
-  <h4> Results: </h4>
-    <% @festivals_search.each do |festival| %>
-    <%= link_to festival.name, festival %>
-    <% end %> 
-  <% end %>

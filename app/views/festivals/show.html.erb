@@ -34,18 +34,17 @@
           <img src="<%=@festival.image_url%>" alt= "" class="festival_information">
     <br>
     </div>  
+    <span class="festivals_artist">
+      <% @festival.artists.order(:name).uniq.each do |artist|%>
+      <%=link_to artist.name, artist%> | 
+        <% end%>
+  </span>
+    <br>
+
+
     <div class="festival_description">
     <p class="festival_description"> <%= @festival.description%> </p>
     </div>
-    <div class="festivals_artist">
-        <% @festival.artists.uniq.each do |artist|%>
-            <div class="festivals_artist">
-
-        <%=link_to artist.name, artist_path(artist)%><img src="<%=artist.artist_image%>" alt='' class="festivals_artist" > 
-        
-            </div>
-        <% end%>
-    </div>
-    <br>
+    
   </div>
 </div>
