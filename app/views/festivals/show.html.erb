@@ -46,5 +46,10 @@
     <p class="festival_description"> <%= @festival.description%> </p>
     </div>
     
+comments:<br>
+    <% @festival.favorites.each do |f|  %>
+      user: <%=  f.fan.username %>
+    comment: <%=  f.comment %>
+    <%  end %> 
   </div>
 </div>
