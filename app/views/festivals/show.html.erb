@@ -1,51 +1,51 @@
 <div id="festivals_show"
   <div class="festival_show"> 
     <h1 class="festival_show"><%= @festival.name%></h1>
-    <div class="festival_info">
-      <div class="festival_description">
-        <p class="festival_description"> Location: </p> <%= @festival.location %><br>
-        <p class="festival_description"> Starts at:</p> <%=@festival.start_date.strftime("%m/%d/%Y")%> <br>
-        <p class="festival_description"> Duration: </p> <%=@festival.duration%> days. <br>
-      </div>
-      <div class="festival_description">
-        <p class="fes_title"> <%= @festival.description%> </p>
-        <img src="<%=@festival.image_url%>" alt= "" >
-      </div>
-       
-      
-    <br>
-        <ul class="festivals_artist">
-        <% @festival.artists.uniq.each do |artist|%>
-            <li class="festival_info"> <%= link_to artist.name, artist%> </li>
-        <% end%>
-        </ul>
-       
-    </div>
-        <div class="festival_wishlist">
-          <%if @current_fan != nil %>
-              <% if @favorite_id.blank? %>
-                  <%= button_to 'Add to Wishlist', festival_favorites_path(@festival), method: :post %>
-                  <% else %>
-                  <%= form_with model: @favorite, url: festival_favorite_path(@festival, @favorite_id), method: :patch do |f|%>
-                  <%= f.text_area :comment, placeholder: "Add comment here"%>
-                <%= f.submit%>
-              <% end %>
-            <%= button_to 'remove from Wishlist', festival_favorite_path(@festival, @favorite_id), method: :delete %>
+      <div class="festival_info">
+   
+        <div class="festival_information" >
+          <div class="festival_attribute">
+            <p class="festival_attribute"> Location:  <%= @festival.location %> <br> </p>
+            <p class="festival_attribute"> Starts at: <%=@festival.start_date.strftime("%m/%d/%Y")%> <br> </p>
+            <p class="festival_attribute"> Duration: <%=@festival.duration%> days <br>  </p>
           </div>
-          
+        <br>
+          <div class="festival_wishlist">
+            <%if @current_fan != nil %>
+                <% if @favorite_id.blank? %>
+                    <%= button_to 'Add to Wishlist', festival_favorites_path(@festival), method: :post %>
+                    <% else %>
+                    <%= form_with model: @favorite, url: festival_favorite_path(@festival, @favorite_id), method: :patch do |f|%>
+                    <%= f.text_area :comment, placeholder: "Add comment here"%>
+                    <br><br>
+                  <%= f.submit%>
+                <% end %>
+                <br>
+              <%= button_to 'Remove From Wishlist', festival_favorite_path(@festival, @favorite_id), method: :delete %>
+              <% end %>
+              <% end %>
+              <% if flash[:notice] %>
+              <%= flash[:notice] %>
+              <%end %>
+          </div>
+        <br>
+    
+          </div>
+          <img src="<%=@festival.image_url%>" alt= "" class="festival_information">
+    <br>
+    </div>  
+    <div class="festival_description">
+    <p class="festival_description"> <%= @festival.description%> </p>
+    </div>
+    <div class="festivals_artist">
+        <% @festival.artists.uniq.each do |artist|%>
+            <div class="festivals_artist">
 
+        <%=link_to artist.name, artist_path(artist)%><img src="<%=artist.artist_image%>" alt='' class="festivals_artist" > 
+        
+            </div>
+        <% end%>
+    </div>
+    <br>
   </div>
-    <% end %>
-</div>
-<% end %>
-
-
-
-
-<% if flash[:notice] %>
-<%= flash[:notice] %>
-<%end %>
-
-<br>
-
 </div>
