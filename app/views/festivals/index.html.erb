@@ -5,6 +5,7 @@
       <h2> <%=link_to festival.name, festival %> </h2>
       <p class="location"><%= festival.location %></p>
       </div>
-  <img src="<%=festival.image_url %>" alt="">
+      <%= link_to image_tag(festival.image_url), festival %>
+
   </div>
   <% end %>

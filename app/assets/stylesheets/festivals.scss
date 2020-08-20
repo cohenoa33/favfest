@@ -8,25 +8,21 @@
 	margin-top: 5%;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	// grid-template-columns: repeat(2, 1fr);
-	// grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
 	grid-gap: 2%;
 
 	.festival {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		// border: 1px solid lightgrey;
 		border-radius: 10px;
 
 		.info {
 			padding: 15px;
 			border-bottom-left-radius: 10px;
 			border-top-left-radius: 10px;
-            background-color: #e6e5e5;
-            -webkit-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
-            -moz-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+			height:300px;
+			background-color: #e6e5e5;
             box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
-			// border-radius: 10px;
+
 
 
 			h2, p {
@@ -42,9 +38,7 @@
 			.location {
 				color: grey;
 			}
-			// .attribute-wrapper {
-			// 	padding: 10px 0;
-			// }
+
 		}
 	}
 
@@ -68,8 +62,8 @@
 	padding: 10px;
 	display: grid;
 	grid-template-columns: 1fr;
-	// border: 1px solid lightgrey;
 	border-radius: 10px;
+	box-shadow: 7px 10px 20px -4px rgba(0, 0, 0, 0.75);
 	
 	.festival_show{
 		margin-top: 10px;
@@ -78,6 +72,7 @@
 		text-align: center;
 		border-radius: 10px;
 		color: whitesmoke;
+		box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);	
 		}
 
 	.festival_info{	
@@ -85,12 +80,7 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		padding: 15px;
-		border-bottom-left-radius: 10px;
-		border-top-left-radius: 10px;
-        -webkit-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
-        -moz-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
-        box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
-		border-radius: 10px;
+
 
 			.festival_attribute {
 				// description, date, duration
@@ -104,16 +94,17 @@
 			.festival_wishlist{
 				// wishlist button and comment
 				input {
-					background-color: #413448;
+					background-color:	whitesmoke;
 					border-radius: 5px;
-					height: 40px;
+					height: 35px;
+					width: 200px;
 					justify-content: center;
-					border: 2px#413448 solid;
 					padding: 10px;
-					color:whitesmoke;
-					font-size: 16px;
+					color: #222222;
+					font-size: 14px;
 					text-align: center;
 					cursor: pointer;
+					border: 2px #222222;
 				}
 
 				input:hover{
@@ -121,11 +112,12 @@
 				}
 				textarea {
 					border-radius: 5px;
-					width: 90%;
+					width: 200px;
+					height: 80px;
 					justify-content: center;
-					border: 2px black solid;
+					border: 2px #222222;
 					padding: 5%;
-					color: #000;
+					color: #222222;
 					font-size: 16px;
 					text-align: center;
 				}
@@ -139,9 +131,7 @@
 				object-fit: cover;
 				background-color: lightgrey;
 				border-radius: 10px;
-				// -webkit-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
-				// -moz-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
-				// box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+				box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
 				
 			}  
 				
@@ -152,33 +142,46 @@
 			color: whitesmoke;
 			background-color: 413448;
 			text-align: center;
+			font-size: 100%;
+			border-radius: 10px;
+			background-color: #222222;
+			box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+				a {
+					color: whitesmoke;
+				}
 
-			// .festival_artist {
-				
-			// img	{
-			// 	width: 10%;
-			// 	object-fit: cover;
-			// 	background-color: lightgrey;
-			// 	border-radius: 10px;
-				// -webkit-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
-				// -moz-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
-				// box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
-				
-			// }  
-			// }
+
+		}
+
+		.festivals_artist a:hover{
+
+			color: rgb(151, 113, 124);
 		}
 
 		.festival_description {
-			font-size: 90%;
+			font-size: 100%;
 			padding: 15px;
 			line-height: 200%;
 			border-radius: 10px;
-			// border-radius: 10px;
 			background-color: #e6e5e5;
-			-webkit-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
-			-moz-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
 			box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);				
 		}
+
+		.festival_comments {
+			font-size: 85%;
+			padding: 15px;
+			line-height: 200%;
+			border-radius: 10px;
+			-webkit-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+			-moz-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+			box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);		
+			
+				p.festival_comment{
+					text-shadow: 1px 1px black;
+				}
+		}
+		
+	
 
 	
 	}

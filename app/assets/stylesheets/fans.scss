@@ -53,7 +53,9 @@
         overflow: hidden;
         text-overflow: ellipsis;
         text-shadow: 2px 2px grey;
+        
     }
+
 
     .title {
         margin-top: 10px;
@@ -64,17 +66,20 @@
         box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
 
         h3 {
-
             padding-top: 10px;
             text-shadow: 2px 2px darkgrey
         }
-
+        
+        h3 a:hover{
+            color: rgb(151, 113, 124);
+        }
     
         p {
            color: rgb(151, 113, 124);
         }
 
-        img {
+        #img_fan_page img{
+            max-width: 450px;
             border-radius: 10px;
             -webkit-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
             -moz-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);

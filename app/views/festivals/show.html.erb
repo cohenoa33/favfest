@@ -18,7 +18,7 @@
                     <%= form_with model: @favorite, url: festival_favorite_path(@festival, @favorite_id), method: :patch do |f|%>
                     <%= f.text_area :comment, placeholder: "Add comment here"%>
                     <br><br>
-                  <%= f.submit%>
+                  <%= f.submit "Add/Update Comment"%>
                 <% end %>
                 <br>
               <%= button_to 'Remove From Wishlist', festival_favorite_path(@festival, @favorite_id), method: :delete %>
@@ -34,6 +34,7 @@
           <img src="<%=@festival.image_url%>" alt= "" class="festival_information">
     <br>
     </div>  
+    <br>
     <span class="festivals_artist">
       <% @festival.artists.order(:name).uniq.each do |artist|%>
       <%=link_to artist.name, artist%> | 
@@ -43,13 +44,16 @@
 
 
     <div class="festival_description">
-    <p class="festival_description"> <%= @festival.description%> </p>
-    </div>
+   <%= @festival.description%> </p>
+  
+  <br>
+  <p class="festival_comments"> Checkout what other fans are saying:<br>
     
-comments:<br>
     <% @festival.favorites.each do |f|  %>
-      user: <%=  f.fan.username %>
-    comment: <%=  f.comment %>
+      <%=  f.fan.username %>
+      said "<%=  f.comment %>"<br>
     <%  end %> 
+    </p>
+   
   </div>
 </div>

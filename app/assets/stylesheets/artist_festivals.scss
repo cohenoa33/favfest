@@ -32,6 +32,10 @@
         line-height: 200%;
         list-style-type: none
     }
+
+    .search_results li a:hover{
+            color: rgb(151, 113, 124);
+    }
     
     .no_results {
     font-size: large; 

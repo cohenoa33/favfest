@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get '/wishlist', to:'fans#show', as: 'wishlist'
   # post '/', to: 'favorites#create', as: 'favorite'
   delete '/sessions', to: 'sessions#destroy'
-  resources :artists, only: [:index, :show]
+  resources :artists
   resources :fans, only: [:index, :show, :create]
   # resources :artist_festivals
   resources :festivals do 

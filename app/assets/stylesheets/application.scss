@@ -39,8 +39,7 @@ nav {
     border-left: none;
     border-right: none;
     border-radius: 10px;
-    -webkit-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
-    -moz-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
+
     box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
   
 }
@@ -113,6 +112,7 @@ nav ul .search-icon .icon button{
     font-size: 100%;
     border: 0px;
     background: darkgray;
+    cursor: pointer;
 }
 nav ul .search-icon .icon button:hover {
     background: #e6e6e6;
@@ -127,7 +127,7 @@ nav ul .search-icon .icon button:hover {
     nav ul div.items {
         flex: 4;
     }
-    #festivals {
+    #festivals, #artists, #artists_show,{
             grid-template-columns: 1fr;
     }
 

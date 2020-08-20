@@ -1,0 +1,20 @@
+<div class="form">
+
+
+<%= form_for @artist do |f| %>
+
+	<%= f.text_field :name, placeholder: "name" %><br>
+
+	<%= f.text_area :genre, placeholder: "genre" %><br>
+    
+
+	<%= f.text_field :artist_image, placeholder: "image" %><br>
+
+	<%= f.text_area :bio, placeholder: "bio" %><br>
+
+	<%= f.text_field :video , placeholder: "video" %><br>
+
+  <%= f.submit "Create new Artist" %><br>
+<% end %>
+
+</div>

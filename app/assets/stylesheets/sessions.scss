@@ -8,12 +8,9 @@
     padding: 15px;
 	border-radius: 10px;
     background-color: #000000;
-    -webkit-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
-    -moz-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
     box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
 
-
-         
+        
     .signin {
             height: 30px;
             justify-content: center;
@@ -29,12 +26,17 @@
         .signin:hover{
             color: rgb(151, 113, 124);
         }
+        li {
+            margin: 5px;
+            padding-top: 15px;
+            color: red;
+            list-style: none;
+    
+        }
         
     }
 
-    li {
-        color: red
-    }
+  
 
     table {
         background-color: pink;

@@ -5,7 +5,7 @@
             <h2> <%= link_to artist.name, artist %> </h2>
                 <p class="genre"><%= artist.genre%></p>
         </div>
-    <img src="<%=artist.artist_image%>" alt="">
+        <%= link_to image_tag(artist.artist_image), artist %>
        </div>
     <% end %>
     

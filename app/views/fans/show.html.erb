@@ -4,8 +4,8 @@
     <div class='title'> 
         <%     @fan.festivals.collect do |festival| %>
             <h3><%=    link_to festival.name, festival %> </h3>
-            <img src="<%=festival.image_url%>" alt= "" width=75% > <br>
-             <p class="data"> Your comment:    <%=festival.favorites.find_by(fan_id: @fan.id).comment%> <p>
+           <p id="img_fan_page" ><%= link_to image_tag(festival.image_url), festival %></p>
+            <p class="data"> Your comment:    <%=festival.favorites.find_by(fan_id: @fan.id).comment%> <p>
             <br>
             <%  end %>
 
