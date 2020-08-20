@@ -1,6 +1,6 @@
 class ArtistFestivalsController < ApplicationController
+    
     def search
-        # byebug
         @artist_festival = ArtistFestival.search(params[:search])
         
     end

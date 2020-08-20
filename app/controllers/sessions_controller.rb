@@ -1,7 +1,5 @@
 class SessionsController < ApplicationController
-    # before_action :authorized, except: [:new, :create]
-	# before_action :current_fan, except: [:new, :create]
-	
+
 	def new
 	end
 
@@ -22,7 +20,6 @@ class SessionsController < ApplicationController
 
 	def destroy
 		session[:user_id] = nil
-		flash[:message] = "Successfully logged out."
 		redirect_to festivals_path
 	end
 end

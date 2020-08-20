@@ -17,20 +17,12 @@ class ArtistsController < ApplicationController
 		if @artist.save
 			redirect_to @artist
 		else
-			render :new
+		render :new
 		end
 	end
 
-    # def update
-	# 	if @artist.update(artist_params)
-	# 		redirect_to @artist
-	# 	else
-	# 		render :edit
-	# 	end
-	# end
 
     private
-
     def artist_params
         params.require(:artist).permit(:name, :genre, :artist_image, :bio, :video)
     end

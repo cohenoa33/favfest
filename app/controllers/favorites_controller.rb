@@ -13,7 +13,6 @@ class FavoritesController < ApplicationController
     end
 
     def update
-        # byebug
         @favorite.update(favorite_params)
             redirect_to '/wishlist'
     end
@@ -28,7 +27,6 @@ class FavoritesController < ApplicationController
     end
 
     def already_added_to_wishlist?
-        # byebug
         Favorite.where(fan_id: current_fan.id, festival_id:
         params[:festival_id]).exists?
     end
