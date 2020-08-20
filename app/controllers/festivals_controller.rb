@@ -1,7 +1,7 @@
 class FestivalsController < ApplicationController
 
     def index
-        @festivals = Festival.all.order(:name)
+        @festivals = Festival.index_by
     end
     
     def show

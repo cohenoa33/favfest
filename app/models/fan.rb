@@ -6,4 +6,10 @@ class Fan < ApplicationRecord
     validates :password, presence: true, length:{ in: 5...10 }
     
     has_secure_password
+
+    def most_recent
+        self.festivals.order(:created_at)
+    end
+
+    
 end

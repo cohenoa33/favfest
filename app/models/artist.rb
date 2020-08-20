@@ -10,5 +10,4 @@ class Artist < ApplicationRecord
         self.festivals.order(:name).uniq
     end
 
-
 end
