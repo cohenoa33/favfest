@@ -1,24 +1,5 @@
-# README
+# FavFest
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+FaveFest is a music festival wishlist app that allows for an immersive user experience in which users can search, add festivals to their wishlish music festivals of their choosing. in addition users can view different artists associated with given festivals and vice versa.
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
