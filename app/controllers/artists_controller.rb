@@ -18,8 +18,18 @@ class ArtistsController < ApplicationController
 			redirect_to @artist
 		else
 		render :new
-		end
-	end
+    end
+end
+        
+    # def edit
+    #     @artist = Artist.find(params[:id])
+    # end
+
+    # def update
+    #     @artist = Artist.update(artist_params)
+    #     redirect_to @artist
+    # end
+    
 
 
     private

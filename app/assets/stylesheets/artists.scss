@@ -114,6 +114,8 @@
 	}
 
 	.artist_show_festivals {
+		
+		color: whitesmoke;
 		padding: 15px;
 		display: grid;
 		font-size: 120%;
@@ -155,4 +157,27 @@
 	}
 
 	
+}
+
+.new_artist_form {
+
+	line-height: 300%;
+
+	input {
+		width: 100%;
+		line-height: 200%;
+		font-size: 12px;
+	}
+	textarea {
+		width: 100%;
+		line-height: 500%;
+		font-size: 12px;
+	}
+	.creat_artist {
+		width: 150px;
+		align-items: center;
+
+
+	}
+
 }

@@ -1,11 +1,11 @@
 <div class="form">
-
+<div class="new_artist_form">
 
 <%= form_for @artist do |f| %>
 
 	<%= f.text_field :name, placeholder: "name" %><br>
 
-	<%= f.text_area :genre, placeholder: "genre" %><br>
+	<%= f.text_field :genre, placeholder: "genre" %><br>
     
 
 	<%= f.text_field :artist_image, placeholder: "image" %><br>
@@ -14,7 +14,8 @@
 
 	<%= f.text_field :video , placeholder: "video" %><br>
 
-  <%= f.submit "Create new Artist" %><br>
+  <%= f.submit "Update Artist", class: "creat_artist"%><br>
 <% end %>
 
+</div>
 </div>
