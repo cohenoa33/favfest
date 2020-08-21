@@ -48,11 +48,14 @@
   
   <br>
   <p class="festival_comments"> Checkout what other fans are saying:<br>
-    
+
     <% @festival.updated_at.each do |f|  %>
-      <%=  f.fan.username %>
-      said "<%=  f.comment %>"<br>
-    <%  end %> 
+      <% if !f.comment.nil? %>
+    <%=  f.fan.username %> said:  <br> 
+        "<%=  f.comment %>"<br>
+        <%  end %> 
+        <%  end %> 
+        
     </p>
    
   </div>

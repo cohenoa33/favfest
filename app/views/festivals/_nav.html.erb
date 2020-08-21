@@ -1,9 +1,8 @@
 <nav>
   <ul> 
-    <li class="logo">FavFest</li>
+    <li class="logo"><a href="/">FavFest</a></li>
    <div class="items">
-    <li>  <a href="/festivals"class="button" > Festivals </a></li>
-    <li>  <a href="/artists" class="button" > Artists</a></li>
+    
       <% if session[:user_id] %>
           <li> <a href= '/wishlist'>  <%="#{Fan.find(session[:user_id]).username.capitalize}"%> Wishlist </a></li>
           <li> <%= link_to "Logout", sessions_path, method: "delete" %></li>
@@ -12,6 +11,9 @@
           <li> <a href= '/new'> Login </a></li>
           <li> <a href= '/signup'> Signup </a></li>
       <% end %>
+
+      <li>  <a href="/festivals"class="button" > Festivals </a></li>
+      <li>  <a href="/artists" class="button" > Artists</a></li>
     </div>
     <li class="search-icon"> 
       <%= form_tag search_page_path, method: :get, class: 'search_bar', id:'search_button' do %> 
