@@ -1,6 +1,7 @@
 class FansController < ApplicationController
         before_action :authorized, except: [:new, :create]
         before_action :current_fan, except: [:new, :create]
+        before_action :find_fan, only: [:show, :alphabetical_order]
 
         def new
         @fan = Fan.new
@@ -18,20 +19,25 @@ class FansController < ApplicationController
         end
     
         def show
-            @fan = Fan.find(@current_fan.id)
+            # @fan = Fan.find(@current_fan.id)
         end
 
         def index
-        @fans = Fan.all
+            @fans = Fan.all
         end
 
         def alphabetical_order
+            # @fan = Fan.find(@current_fan.id)
             redirect_to '/alphabetical'
         end
         private
 
         def fan_params
         params.require(:fan).permit(:username, :password, :password_confirmation)
+        end
+
+        def find_fan
+            @fan = Fan.find(@current_fan.id)
         end
 
 end

@@ -4,17 +4,27 @@ class ArtistFestival < ApplicationRecord
 
   def self.search (search)
     search = search.titleize
-    key = "%#{search}%" 
-    if !search.empty? 
-          @artist_festival = Festival.where('location LIKE :search OR name LIKE :search', search: key).order(:name)
-          if @artist_festival.empty?
-            @artist_festival = Artist.where('name LIKE :search OR genre LIKE :search', search: key).order(:name)
-          else
-            @artist_festival
-          end
+    if search.empty?
+      @artist_fesitval = nil
     else
-        @artist_fesitval = nil
-      end
+      find_festival(search)
+    end
+  end
+
+  def self.find_festival(search)
+    key = "%#{search}%" 
+    @festival = Festival.where('location LIKE :search OR name LIKE :search', search: key).order(:name)
+    find_artist(search, @festival)
+  end
+
+    def self.find_artist(search, festival)
+      key = "%#{search}%" 
+      @artist = Artist.where('name LIKE :search OR genre LIKE :search', search: key).order(:name)
+      search_results(festival, @artist)
+    end
+
+    def self.search_results(festival, artist)
+      @artist_festival = festival + artist
     end
     
 end

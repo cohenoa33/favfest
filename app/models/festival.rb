@@ -20,9 +20,6 @@ class Festival < ApplicationRecord
         self.favorites.order(:created_at)
     end
 
-    def alphabatize 
-        self.favorites.order(:name).alphabetize
-    end
 
 
 end # class end
