@@ -62,6 +62,12 @@ nav ul li.logo{
     font-size: 30px;
     font-weight: 700;
     color: whitesmoke;
+    a {
+        color: whitesmoke;   
+    }
+    a:hover {
+        color: rgb(151, 113, 124);
+    }
 }
 
 nav ul div.items {

@@ -12,8 +12,10 @@
         <%  @fan.most_recent.collect do |festival| %>
             <h3><%=    link_to festival.name, festival %> </h3>
            <p id="img_fan_page" ><%= link_to image_tag(festival.image_url), festival %></p>
+           <% if !@fan.find_comment(festival).nil? %>
             <p class="data"> Your comment:    <%=@fan.find_comment(festival)%> <p>
             <br>
+            <%  end %>
             <%  end %>
 
         <br>
