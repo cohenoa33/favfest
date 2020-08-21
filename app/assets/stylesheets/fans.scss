@@ -48,13 +48,19 @@
     -webkit-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
     -moz-box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
     box-shadow: 7px 10px 20px -4px rgba(0,0,0,0.75);
-
+    
+    .wishlist a:hover {
+        color: rgb(151, 113, 124);
+    }
+    
     h1 {
         overflow: hidden;
         text-overflow: ellipsis;
         text-shadow: 2px 2px grey;
         
     }
+
+    
 
 
     .title {

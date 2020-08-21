@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/new', to: 'sessions#new', as: 'new'
   post '/login', to: 'sessions#create', as: 'login'
   get '/wishlist', to:'fans#show', as: 'wishlist'
+  get '/alphabetical', to:'fans#alphabetical', as: 'ordered_wishlist'
   # post '/', to: 'favorites#create', as: 'favorite'
   delete '/sessions', to: 'sessions#destroy'
   resources :artists
