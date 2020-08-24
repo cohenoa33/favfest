@@ -5,8 +5,10 @@
     <br>
     <p> you've added <%=@current_fan.total_wishlist %> festivals to your wishlist: </p>
     <br>
-    <a href="/wishlist"> view by most recent <a>
-
+    
+    <%= form_tag fan_path(@current_fan), method: :get do %> 
+        <%= submit_tag "sort" %>
+        <% end %>
     <div class='title'> 
 
     

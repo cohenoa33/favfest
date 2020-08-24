@@ -7,6 +7,6 @@ class ArtistFestivalsController < ApplicationController
 
     private
     def artist_festivals_params
-        params.require(:artist_festivals).permit(:search)
+        params.require(:artist_festivals).permit(:search, :sort)
     end
 end

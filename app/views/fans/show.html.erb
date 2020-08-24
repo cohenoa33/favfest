@@ -3,15 +3,19 @@
     <br>
     <p> you've added <%=@fan.total_wishlist %> festivals to your wishlist: </p>
     
+  
     <br>
-    <a href="/alphabetical"> view alphabeticaly <a>
- 
+        <%= form_tag fan_path(@fan), method: :get do %> 
+        <%= submit_tag "sort", name: :sort%>
+        <% end %>
+ x
+
     <div class='title'> 
 
     
-        <%  @fan.most_recent.collect do |festival| %>
+        <%  @fanfestivals.each do |festival| %>
             <h3><%=    link_to festival.name, festival %> </h3>
-           <p id="img_fan_page" ><%= link_to image_tag(festival.image_url), festival %></p>
+           <p id="img_fan_page" > <%= link_to image_tag(festival.image_url), festival %></p>
            <% if !@fan.find_comment(festival).nil? %>
             <p class="data"> Your comment:    <%=@fan.find_comment(festival)%> <p>
             <br>

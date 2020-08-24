@@ -19,6 +19,6 @@ class FestivalsController < ApplicationController
 private
 
     def festival_params
-        params.require(:festival).permit(:name, :location, :organizer_id, :image_url, :start_date, :duration, :description)
+        params.require(:festival).permit(:name, :location, :organizer_id, :image_url, :start_date, :duration, :description, :sort)
     end
 end
