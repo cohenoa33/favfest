@@ -1,9 +1,10 @@
 🎸🤘🎼🎵FavFest🎸🤘🎼🎵
 =========================
 
-FavFest was built with the intention of providing users more information about the festivals they love and allowing a interective diary of sorts for the festivals they enjoy.
+FavFest was built with the intention of providing users more information about the festivals they love and allowing an interactive diary of sorts for the festivals they enjoy.
 
-FaveFest allows for an immersive user experience in which users can search, add festivals to their wishlish and add associated comments to those festivals added to their wishlist. in addition users can view different artists associated with given festivals and vice versa.
+FaveFest allows for an immersive user experience in which users can search, add festivals to their wishlist and add associated comments to those festivals added to their wishlist. in addition, users can view different artists associated with given festivals and vice versa.
+
 
 ---
 ### SECURITY :
