@@ -5,7 +5,7 @@ FavFest was built with the intention of providing users more information about t
 
 FaveFest allows for an immersive user experience in which users can search, add festivals to their wishlist and add associated comments to those festivals added to their wishlist. in addition, users can view different artists associated with given festivals and vice versa.
 
-
+[Live App](https://favfest.herokuapp.com/)
 ---
 ### SECURITY :
 
